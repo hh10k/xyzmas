@@ -1,0 +1,20 @@
+{
+  "mode": "random",
+
+  "gpioPin": 10,
+  "ledCount": 200,
+  "ampLimit": 8,
+  "framesPerSecond": 60,
+  "brightness": 1,
+
+  "nightEnabled": true,
+  "nightBrightness": 0.5,
+  "sunsetStart": 1900,
+  "sunsetEnd": 1930,
+  "sunriseStart": 600,
+  "sunriseEnd": 700,
+
+  "idMode": {
+    "stepIntervalMs": 200
+  }
+}

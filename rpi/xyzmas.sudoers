@@ -1,0 +1,4 @@
+xyzmas ALL=(ALL) NOPASSWD: /bin/systemctl start xyzmas.service
+xyzmas ALL=(ALL) NOPASSWD: /bin/systemctl stop xyzmas.service
+xyzmas ALL=(ALL) NOPASSWD: /bin/systemctl restart xyzmas.service
+xyzmas ALL=(ALL) NOPASSWD: /sbin/shutdown now

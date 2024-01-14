@@ -1,0 +1,22 @@
+# Runs xyzmas after basic.target, the earliest possible time as determined by
+# using `systemd-analyze critical-chain` and `systemd-analyze plot > sysd.svg`
+# This is before networking is available, and moments before the SPI driver is ready.  It doesn't seem
+# to be possible to determine exactly when the SPI driver will respond.
+
+[Unit]
+Description=XYZmas Christmas Lights
+After=basic.target
+
+[Install]
+WantedBy=basic.target
+
+[Service]
+Type=simple
+SyslogIdentifier=xyzmas
+User=xyzmas
+Group=xyzmas
+WorkingDirectory=/home/xyzmas/server
+ExecStart=/home/xyzmas/server/xyzmas
+#LimitNOFILE=infinity
+#IgnoreSIGPIPE=false
+#KillMode=process
